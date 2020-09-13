@@ -52,7 +52,6 @@ DEFAULT_LANG=tupper
 USE_GUILD_SUBSCRIPTIONS=false
 REDISURL=redis://localhost:6379
 ```
-(don't worry, that token is a fake)
 The PG-prefixed variables should be filled in with the connection info to your PostgreSQL database set up during installation. You need a **database**, a **user** with associated **password** with full write access to that database, and the **host IP** of the machine running the server (localhost if it's the same machine).
 SENTRY_DSN is a link to a registered Sentry project. Make one here: https://sentry.io/ and copy the provided DSN link into that field.
 Edit DEFAULT_PREFIX, DEFAULT_LANG as desired. Setting USE_GUILD_SUBSCRIPTIONS to true will guarantee list, find, and logging functions will always give the correct username.
