@@ -1,31 +1,31 @@
-# Tupperbox
+# PandaCrate
 A Discord bot written in <a href="https://github.com/abalabahaha/eris">eris</a> for proxying user messages through webhooks to emulate users having multiple user accounts.
 
 # Commands
-- tul!avatar  -  View or change a member's avatar
-- tul!birthday  -  View or change a member's birthday, or see upcoming birthdays
-- tul!brackets  -  View or change a member's brackets
-- tul!cfg  -  Configure server-specific settings
-  - tul!cfg prefix \<newPrefix> - Change the bot's prefix
-  - tul!cfg rename \<newname> - Change all instances of the default name 'member' in bot replies in this server to the specified term
-  - tul!cfg log \<channel> - Enable the bot to send a log of all member messages and some basic info like who registered them. Useful for having a searchable channel and for distinguishing between similar names.
-  - tul!cfg blacklist <add|remove> <channel(s)> - Add or remove channels to the bot's proxy blacklist - users will be unable to proxy in blacklisted channels.
-  - tul!cfg cmdblacklist <add|remove> <channel(s)> - Add or remove channels to the bot's command blacklist - users will be unable to issue commands in blacklisted channels.
-- tul!describe  -  View or change a member's description
-- tul!export - Export your data to a file
-- tul!feedback  -  Get a link to the support server
-- tul!find  -  Find and display info about members by name
-- tul!group - View or change your groups
-- tul!help  -  Print this message, or get help for a specific command
-- tul!invite  -  Get the bot's invite URL
-- tul!list  -  Get a detailed list of yours or another user's registered members
-- tul!listng - Like list, but without showing group info
-- tul!register  -  Register a new member
-- tul!remove  -  Unregister a member
-- tul!rename  -  Change a member's name
-- tul!showuser  -  Show the user that registered the member that last spoke
-- tul!tag  -  Remove or change a member's or your user tag (displayed next to name when proxying)
-- tul!togglebrackets - Toggle whether the brackets used to proxy also show up in the resulting message for the given member.
+- pika!avatar  -  View or change a member's avatar
+- pika!birthday  -  View or change a member's birthday, or see upcoming birthdays
+- pika!brackets  -  View or change a member's brackets
+- pika!cfg  -  Configure server-specific settings
+  - pika!cfg prefix \<newPrefix> - Change the bot's prefix
+  - pika!cfg rename \<newname> - Change all instances of the default name 'member' in bot replies in this server to the specified term
+  - pika!cfg log \<channel> - Enable the bot to send a log of all member messages and some basic info like who registered them. Useful for having a searchable channel and for distinguishing between similar names.
+  - pika!cfg blacklist <add|remove> <channel(s)> - Add or remove channels to the bot's proxy blacklist - users will be unable to proxy in blacklisted channels.
+  - pika!cfg cmdblacklist <add|remove> <channel(s)> - Add or remove channels to the bot's command blacklist - users will be unable to issue commands in blacklisted channels.
+- pika!describe  -  View or change a member's description
+- pika!export - Export your data to a file
+- pika!feedback  -  Get a link to the support server
+- pika!find  -  Find and display info about members by name
+- pika!group - View or change your groups
+- pika!help  -  Print this message, or get help for a specific command
+- pika!invite  -  Get the bot's invite URL
+- pika!list  -  Get a detailed list of yours or another user's registered members
+- pika!listng - Like list, but without showing group info
+- pika!register  -  Register a new member
+- pika!remove  -  Unregister a member
+- pika!rename  -  Change a member's name
+- pika!showuser  -  Show the user that registered the member that last spoke
+- pika!tag  -  Remove or change a member's or your user tag (displayed next to name when proxying)
+- pika!togglebrackets - Toggle whether the brackets used to proxy also show up in the resulting message for the given member.
 
 # Installation
 This bot runs off of Node.js. You can download it from https://nodejs.org/en/download/
@@ -38,9 +38,9 @@ The bot now also runs with Redis. Download it from https://redis.io/download
 # Running
 The bot expects a file in the same directory named `.env` with some data to get it started. Format should look like this:
 ```
-DISCORD_TOKEN=MTk4NjIyNDgzNDcxOTI1MjQ4.Cl2FMQ.ZnCjm1XVW7vRze4b7Cq4se7kKWs
-DISCORD_OWNERID=99326032288423936
-DISCORD_INVITE=431544605209788416 (note: remove this line if you don't want the bot to have an invite command)
+DISCORD_TOKEN=
+DISCORD_OWNERID=
+DISCORD_INVITE= (note: remove this line if you don't want the bot to have an invite command)
 PGUSER=???
 PGHOST=???
 PGDATABASE=???
@@ -57,6 +57,3 @@ The PG-prefixed variables should be filled in with the connection info to your P
 SENTRY_DSN is a link to a registered Sentry project. Make one here: https://sentry.io/ and copy the provided DSN link into that field.
 Edit DEFAULT_PREFIX, DEFAULT_LANG as desired. Setting USE_GUILD_SUBSCRIPTIONS to true will guarantee list, find, and logging functions will always give the correct username.
 Leave REDISURL alone unless you change the port Redis runs on or you host it on another machine.
-
-# Upgrading from JSON storage
-The new version of the bot runs on PostgreSQL and not JSON. If you would like to upgrade, install PostgreSQL, switch to the rewrite branch, and on startup the bot will prompt you to import your JSON databases to the Postgres server you've configured automatically. (Make a backup of these files first - it will delete them)
