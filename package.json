@@ -1,16 +1,16 @@
 {
   "name": "pandacrate",
   "version": "1.5.0",
-  "description": "pandacrate bot for discord message proxying",
+  "description": "pandacrate a bot for discord message proxying",
   "main": "pc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/Keterr/Tupperbox/blob/rewrite/README.md",
+  "homepage": "https://github.com/the-cute-panda/PandaCrate/README.md",
   "repository": "github:Keterr/Tupperbox",
-  "bugs": "https://github.com/Keterr/Tupperbox/issues",
-  "author": "Keter",
-  "license": "ISC",
+  "bugs": "https://github.com/the-cute-panda/PandaCrate/issues",
+  "author": "the-cute-panda",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "@sentry/node": "^5.7.1",
     "bufferutil": "^4.0.1",
