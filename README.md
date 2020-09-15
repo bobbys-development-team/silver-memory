@@ -56,3 +56,5 @@ The PG-prefixed variables should be filled in with the connection info to your P
 SENTRY_DSN is a link to a registered Sentry project. Make one here: https://sentry.io/ and copy the provided DSN link into that field.
 Edit DEFAULT_PREFIX, DEFAULT_LANG as desired. Setting USE_GUILD_SUBSCRIPTIONS to true will guarantee list, find, and logging functions will always give the correct username.
 Leave REDISURL alone unless you change the port Redis runs on or you host it on another machine.
+
+[![](https://discord.com/api/guilds/721491823545024533/embed.png?style=banner4)](https://discord.gg/hR7C2aN)
