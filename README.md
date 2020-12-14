@@ -27,4 +27,4 @@ A Discord bot written in <a href="https://github.com/abalabahaha/eris">eris</a> 
 - pika!tag  -  Remove or change a member's or your user tag (displayed next to name when proxying)
 - pika!togglebrackets - Toggle whether the brackets used to proxy also show up in the resulting message for the given member.
 
-[![](https://discord.com/api/guilds/774176483920707615/embed.png?style=banner4)](https://discord.gg/HQhGZsnYmk)
+[![](https://discord.com/api/guilds/774176483920707615/embed.png?style=banner4)](https://discord.gg/yHKQnGCNz7)
