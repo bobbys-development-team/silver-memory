@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/the-cute-panda/PandaCrate/README.md",
-  "repository": "github:the-cute-panda/pandacrate",
-  "bugs": "https://github.com/the-cute-panda/PandaCrate/issues",
-  "author": "the-cute-panda",
+  "homepage": "https://github.com/bobbys-development-team/PandaCrate/README.md",
+  "repository": "github:bobbys-development-team/pandacrate",
+  "bugs": "https://github.com/bobbys-development-team/PandaCrate/issues",
+  "author": "bobbys-development-team",
   "license": "BSD-3-Clause",
   "dependencies": {
     "@sentry/node": "^5.7.1",
