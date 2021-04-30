@@ -12,7 +12,7 @@
   "author": "bobbys-development-team",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@sentry/node": "^5.7.1",
+    "@sentry/node": "^6.3.4",
     "bufferutil": "^4.0.1",
     "dotenv": "^8.2.0",
     "eris": "github:keterr/eris#dev",
