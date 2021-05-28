@@ -21,7 +21,7 @@
     "ioredis": "^4.16.0",
     "pako": "^2.0.2",
     "pg": "^8.2.1",
-    "probe-image-size": "^6.0.0",
+    "probe-image-size": "^7.1.1",
     "sodium-native": "^3.2.0",
     "string-length": "^4.0.1",
     "valid-url": "^1.0.9",
