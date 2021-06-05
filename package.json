@@ -1,14 +1,14 @@
 {
-  "name": "pandacrate",
-  "version": "1.5.0",
+  "name": "silver-memory",
+  "version": "1.0.1",
   "description": "pandacrate a bot for discord message proxying",
   "main": "pc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/bobbys-development-team/PandaCrate/README.md",
-  "repository": "github:bobbys-development-team/pandacrate",
-  "bugs": "https://github.com/bobbys-development-team/PandaCrate/issues",
+  "homepage": "https://github.com/bobbys-development-team/silver-memory/README.md",
+  "repository": "github:bobbys-development-team/silver-memory",
+  "bugs": "https://github.com/bobbys-development-team/silver-memory/issues",
   "author": "bobbys-development-team",
   "license": "BSD-3-Clause",
   "dependencies": {
@@ -29,3 +29,4 @@
     "zlib-sync": "^0.1.6"
   }
 }
+
