@@ -15,7 +15,7 @@ module.exports = {
 					timestamp: new Date().toJSON(),
 					color: 0x999999,
 					author: {
-						name: "PandaCrate",
+						name: "silver memory",
 						icon_url: bot.user.avatarURL
 					},
 					footer: {
@@ -33,11 +33,11 @@ module.exports = {
 
 		//general help
 		let output = { embed: {
-			title: "PandaCrate | Help",
-			description: "I am PandaCrate, a bot that allows you to send messages as other pseudo-users using Discord webhooks.\nTo get started, register " + article(cfg) + " " + cfg.lang + " with `" + cfg.prefix + "register` and enter a message with the brackets you set!\nExample: `" + cfg.prefix + "register test [text]` to register with brackets as []\n`[Hello!]` to proxy the message 'Hello!'\n\n**Command List**\nType `"+cfg.prefix+"help command` for detailed help on a command.\n" + String.fromCharCode(8203) + "\n",
+			title: "silver memory | Help",
+			description: "I am silver memory, a bot that allows you to send messages as other pseudo-users using Discord webhooks.\nTo get started, register " + article(cfg) + " " + cfg.lang + " with `" + cfg.prefix + "register` and enter a message with the brackets you set!\nExample: `" + cfg.prefix + "register test [text]` to register with brackets as []\n`[Hello!]` to proxy the message 'Hello!'\n\n**Command List**\nType `"+cfg.prefix+"help command` for detailed help on a command.\n" + String.fromCharCode(8203) + "\n",
 			color: 0x999999,
 			author: {
-				name: "PandaCrate",
+				name: "silver memory",
 				icon_url: bot.user.avatarURL
 			}
 		}};
@@ -45,7 +45,7 @@ module.exports = {
 			if(bot.cmds[cmd].help && bot.cmds[cmd].permitted(msg,args))
 				output.embed.description += `**${cfg.prefix + cmd}**  -  ${bot.cmds[cmd].help(cfg)}\n`;
 		}
-		output.embed.fields = [{ name: "\u200b", value: "Single or double quotes can be used in any command to specify multi-word arguments!\n\nProxy tips:\nReact with \u274c to a recent proxy to delete it (if you sent it)!\nReact with \u2753 to a recent proxy to show who sent it in DM!\n\nQuestions? Join the support server: [invite](https://discord.gg/kaZmvvJ)\nNow accepting donations to cover server costs! [patreon](https://www.patreon.com/PandaCrate)\nInvite the bot to your server --> [click](https://discord.com/oauth2/authorize?client_id=721184843312136235&scope=bot&permissions=536996928)"}];
+		output.embed.fields = [{ name: "\u200b", value: "Single or double quotes can be used in any command to specify multi-word arguments!\n\nProxy tips:\nReact with \u274c to a recent proxy to delete it (if you sent it)!\nReact with \u2753 to a recent proxy to show who sent it in DM!\n\nQuestions? Join the support server: [invite](https://discord.gg/kaZmvvJ)\nNow accepting donations to cover server costs! [patreon](https://www.patreon.com/bobbys_development_team)\nInvite the bot to your server --> [click](https://discord.com/oauth2/authorize?client_id=841379848085962792&scope=bot&permissions=536996928)"}];
 		return output;
 	}
 };
