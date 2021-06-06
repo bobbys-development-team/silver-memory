@@ -4,7 +4,7 @@ Sentry.init({dsn: process.env.SENTRY_DSN });
 
 const Base = require("eris-sharder").Base;
 
-class pandacrate extends Base {
+class silvermemory extends Base {
 	constructor(bot) {
 		super(bot);
 	}
@@ -14,10 +14,11 @@ class pandacrate extends Base {
 		bot.base = this;
 		bot.sentry = Sentry;
 		bot.db = require("./modules/db");
+		bot.msg = require("./modules/msg");
 		bot.cmd = require("./modules/cmd");
 		bot.proxy = require("./modules/proxy");
+		bot.paginator = require("./modules/paginator");
 		bot.recent = {};
-		bot.pages = {};
 		bot.cmds = {};
 		bot.dialogs = {};
 		bot.owner = process.env.DISCORD_OWNERID;
@@ -43,15 +44,18 @@ class pandacrate extends Base {
 
 		setInterval(() => bot.updateStatus(),3600000); //every hour
 		bot.updateStatus();
-	
-		if (!process.env.DISCORD_INVITE) {
+
+		if (!process.env.BOT_INVITE)
 			delete bot.cmds.invite;
-		}
+
+		if (!process.env.SUPPORT_INVITE)
+			delete bot.cmds.feedback;
+
 		if(!fs.existsSync("privacy.txt")) {
-			console.log("no privacy");
+			console.warn("no privacy command");
 			delete bot.cmds.privacy;
 		}
 	}
 }
 
-module.exports = pandacrate;
+module.exports = silvermemory;

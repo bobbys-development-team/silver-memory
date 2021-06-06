@@ -18,22 +18,22 @@ module.exports = {
 		if(name.length < 1 || name.length > 76)	return "Name must be between 1 and 76 characters.";
 		if(brackets.length < 2)	return "No 'text' found to detect brackets with. For the last part of your command, enter the word 'text' surrounded by any characters.\nThis determines how the bot detects if it should replace a message.";
 		if(!brackets[0] && !brackets[1]) return "Need something surrounding 'text'.";
-		if(member && member.name.toLowerCase() == name.toLowerCase())	return proper(cfg.lang) + " with that name under your user account already exists.";
+		if(member && member.name.toLowerCase() == name.toLowerCase())	return `${proper(cfg.lang)} named '${name}' under your user account already exists.`;
 		if(member && member.brackets[0] == brackets[0] && member.brackets[1] == brackets[1]) return proper(cfg.lang) + " with those brackets under your user account already exists.";
 		if(members.length >= 5000) return `Maximum ${cfg.lang}s reached.`;
 		let daysOld = bot.ageOf(msg.author);
 		if((daysOld < 30 && members.Length >= 500) || (daysOld < 14 && members.Length >= 100)) return `Maximum ${cfg.lang}s reached for your account age.`;
-		let avatar = msg.attachments[0] ? msg.attachments[0].url : "https://i.imgur.com/ZpijZpg.png";
+		let avatar = msg.attachments[0] ? msg.attachments[0].url : "https://online-hangout.com/uploads/default/original/1X/47013dd5747db238abda40341f15d3b7f71a9409.png";
 
 		//add member
-		await bot.db.addMember(msg.author.id,{name,avatarURL:avatar,brackets:brackets.slice(0,2)});
+		await bot.db.members.add(msg.author.id,{name,avatarURL:avatar,brackets:brackets.slice(0,2)});
 		return {
 			content: `${proper(cfg.lang)} registered!`,
 			embed: {
 				title: name,
 				description: `**Brackets:**\t${brackets[0]}text${brackets[1]}\n**Avatar URL:**\t${avatar}\n\nTry typing: \`${brackets[0]}hello${brackets[1]}\``,
 				footer: {
-					text: 'If the brackets look wrong, try re-registering using "quotation marks" around the name!'
+					text: "If the brackets look wrong, try re-registering using \"quotation marks\" around the name!"
 				}
 			}
 		};

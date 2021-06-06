@@ -4,23 +4,25 @@ module.exports = {
 	permitted: () => true,
 	groupArgs: true,
 	cooldown: msg => 600000,
-	execute: async (bot, msg, args, cfg) => {
-		let data;
-		if(!args[0]) {
-			let tups = (await bot.db.query("SELECT name, avatar_url, brackets, posts, show_brackets, birthday, description, tag, group_id, group_pos FROM Members WHERE user_id = $1 ORDER BY position", [msg.author.id])).rows;
-			let groups = (await bot.db.query("SELECT id, name, description, tag FROM Groups WHERE user_id = $1 ORDER BY position",[msg.author.id])).rows;
-			data = { tuppers: tups, groups };
-		} else {
-			let tup = (await bot.db.query("SELECT name, avatar_url, brackets, posts, show_brackets, birthday, description, tag, group_id, group_pos FROM Members WHERE user_id = $1 AND LOWER(name) = LOWER($2)", [msg.author.id, args.join(" ")])).rows[0];
-			if(!tup) return "You don't have a registered " + cfg.lang + " with that name.";
-			data = { tuppers: [tup], groups: []};
+	execute: async (bot, msg, args, cfg, members) => {
+		let data = { tuppers: [], groups: []};
+		if(!args[0]) data = { tuppers: members, groups: (await bot.db.groups.getAll(msg.author.id)) };			
+		else {
+			for (let arg of args) {
+				let tup = await bot.db.members.get(msg.author.id, arg);
+				if(!tup) return `You don't have a registered ${cfg.lang} with the name '${arg}'.`;
+				data.tuppers.push(tup);
+			}
 		}
+		if(data.tuppers.length == 0 && data.groups.length == 0) return "You don't have anything to export.";
 		try {
 			let channel = await msg.author.getDMChannel(); //get the user's DM channel
-			await bot.send(channel,"",{name:"Buizels.json",file:Buffer.from(JSON.stringify(data))}); //send it to them in DMs
-			return "Sent you a DM!";
+			let exportMsg = await bot.send(channel,"",{name:"PandaCrate OCs.json",file:Buffer.from(JSON.stringify(data))}); //send it to them in DMs
+			await bot.send(channel, `<${exportMsg.attachments[0].url}>`);
+			if (msg.channel.guild) return "Sent you a DM!";
 		} catch (e) {
-			return bot.send(msg.channel,"I couldn't access your DMs; sending publicly: ",{name:"Buizels.json",file:Buffer.from(JSON.stringify(data))});
+			if (e.code != 50007) throw e;
+			return `<${(await bot.send(msg.channel,"I couldn't access your DMs; sending publicly: ",{name:"PandaCrate OCs.json",file:Buffer.from(JSON.stringify(data))})).attachments[0].url}>`;
 		}
 	}
 };

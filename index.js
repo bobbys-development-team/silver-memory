@@ -24,10 +24,11 @@ const init = async () => {
 				TYPING_START: true,
 				VOICE_STATE_UPDATE: true
 			},
-            messageLimit: 0,
-            guildSubscriptions: false,
+			messageLimit: 0,
+			guildSubscriptions: false,
+			allowedMentions: { roles: false },
 			restMode: true,
-			ratelimiterOffset: 50,
+			ratelimiterOffset: 5,
 			intents: [
 				"guilds",
 				"guildMessages",
@@ -39,13 +40,13 @@ const init = async () => {
 		},
 		stats: true,
 		debug: true,
-		clusters: +process.env.CLUSTERS,
 		shards: +process.env.SHARDS,
-		name: "PandaCrate",
+		clusters: +process.env.CLUSTERS || process.env.DEV? 1 : undefined,
+		name: "silver memory",
 		clusterTimeout: 0.1
 	});
 
-	sharder.eris.on('debug',console.log);
+	sharder.eris.on("debug",console.log);
 	
 
 	if(cluster.isMaster) {

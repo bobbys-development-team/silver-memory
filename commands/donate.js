@@ -3,6 +3,6 @@ module.exports = {
     usage: cfg =>  ["pika!donate to see the donation page"],
     permitted: msg => true,
     execute: (bot, msg, args, cfg) => {
-		return "https://www.patreon.com/PandaCrate";
+		return "https://www.patreon.com/bobbys_development_team";
 	}
 };

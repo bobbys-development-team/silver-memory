@@ -1,5 +1,7 @@
 module.exports = async (msg,_,bot) => {
-    if (!msg.author) return; // occasionally errors on bot message embeds for some reason?
-	let ctx = await bot.getMessageContext(msg);
-	if (!ctx.done && msg.channel.guild) bot.proxy(ctx);
-}
+	// occasionally errors on bot message embeds for some reason?
+	if (!msg.author) return;
+	// ignore messages sent more than 10 minutes ago
+	if (Date.now() - msg.timestamp > 1000*60*10) return;
+	bot.msg(bot, msg, true);
+};
