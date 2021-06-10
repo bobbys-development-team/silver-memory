@@ -40,7 +40,7 @@
 		"eris-sharder": "^1.10.0",
 		"got": "^11.8.2",
 		"ioredis": "^4.16.0",
-		"pako": "^1.0.10",
+		"pako": "^2.0.3",
 		"pg": "^8.2.1",
 		"probe-image-size": "^7.2.1",
 		"string-length": "^2.0.0",
