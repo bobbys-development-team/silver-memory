@@ -43,7 +43,7 @@
 		"pako": "^1.0.10",
 		"pg": "^8.2.1",
 		"probe-image-size": "^7.2.1",
-		"string-length": "^2.0.0",
+		"string-length": "^5.0.0",
 		"valid-url": "^1.0.9",
 		"winston": "^3.2.1",
 		"zlib-sync": "^0.1.6"
