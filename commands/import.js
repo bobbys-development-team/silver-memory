@@ -6,7 +6,7 @@ module.exports = {
 	permitted: () => true,
 	desc: cfg => "Importing data acts as a merge, meaning if there are any " + cfg.lang + "s already registered with the same name as one being imported, the values will be updated instead of registering a new one.",
 	cooldown: msg => 300000,
-	tupperbox: async (bot, msg, client, data, oldData) => {
+	silvermemory: async (bot, msg, client, data, oldData) => {
 
 		let added = 0;
 		let updated = 0;
@@ -101,7 +101,7 @@ module.exports = {
 
 		let client = await bot.db.connect();
 		try {
-			if(data.tuppers) return await module.exports.tupperbox(bot, msg, client, data, old);
+			if(data.tuppers) return await module.exports.silvermemory(bot, msg, client, data, old);
 			else if(data.switches) return await module.exports.pluralkit(bot, msg, client, data, old);
 		} catch(e) {
 			bot.err(msg,e,false);
