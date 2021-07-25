@@ -1,4 +1,5 @@
 # PandaCrate
+Change example.env to .env
 A Discord bot written in <a href="https://github.com/abalabahaha/eris">eris</a> for proxying user messages through webhooks to emulate users having multiple user accounts.
 
 [![Discord Bots](https://cdn.online-hangout.com/api/embed/841379848085962792)](https://cdn.online-hangout.com/bots/841379848085962792)
