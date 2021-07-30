@@ -1,4 +1,4 @@
-# PandaCrate
+# Silver memory
 Change example.env to .env
 
 A Discord bot written in <a href="https://github.com/abalabahaha/eris">eris</a> for proxying user messages through webhooks to emulate users having multiple user accounts.
