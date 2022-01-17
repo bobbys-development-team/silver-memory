@@ -35,7 +35,7 @@
 	"dependencies": {
 		"@sentry/node": "^6.5.1",
 		"bufferutil": "^4.0.1",
-		"dotenv": "^6.2.0",
+		"dotenv": "^14.1.0",
 		"eris": "github:keterr/eris#dev",
 		"eris-sharder": "^1.10.0",
 		"got": "^11.8.2",
