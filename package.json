@@ -39,7 +39,7 @@
 		"eris": "github:keterr/eris#dev",
 		"eris-sharder": "^1.10.0",
 		"got": "^11.8.2",
-		"ioredis": "^4.16.0",
+		"ioredis": "^5.0.2",
 		"pako": "^2.0.3",
 		"pg": "^8.2.1",
 		"probe-image-size": "^7.2.1",
