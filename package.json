@@ -33,7 +33,7 @@
 		}
 	},
 	"dependencies": {
-		"@sentry/node": "^6.5.1",
+		"@sentry/node": "^7.1.0",
 		"bufferutil": "^4.0.1",
 		"dotenv": "^6.2.0",
 		"eris": "github:keterr/eris#dev",
