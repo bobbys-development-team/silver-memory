@@ -1,7 +1,7 @@
 {
 	"name": "silver-memory",
 	"description": "silver memory a bot for discord message proxying",
-	"homepage": "https://github.com/bobbys-development-team/silver-memory/README.md",
+	"homepage": "https://git.cyber-creek.us/Bobby/silver-memory/README.md",
 	"eslintConfig": {
 		"env": {
 			"es6": true,
