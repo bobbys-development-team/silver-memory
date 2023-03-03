@@ -38,7 +38,7 @@
 		"dotenv": "^6.2.0",
 		"eris": "github:keterr/eris#dev",
 		"eris-sharder": "^1.10.0",
-		"got": "^11.8.2",
+		"got": "^12.6.0",
 		"ioredis": "^4.16.0",
 		"pako": "^2.0.3",
 		"pg": "^8.2.1",
